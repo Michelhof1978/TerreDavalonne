@@ -1,0 +1,15 @@
+{% extends "MAILS/MailsBase.html.twig" %}
+
+{% block title %}Confirmation inscription
+{% endblock %}
+
+{% block content %}
+	<h2>Confirmation Inscription</h2>
+
+	<p>Bonjour {{ user.Firstname }} {{ user.lastname }},</p>
+
+	<p>Votre inscription a bien été prise en compte, vous pouvez dès à présent vous connecter.</p>
+  <a href="{{ url('login') }}">Confirmez votre E-mail en cliquant ici</a>
+  <p>Ce lien expire dans {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+	<p>Merci pour votre inscription et à très vite sur notre site internet : <a href="http://terredavalonne.com//">www.terredavalonne.com</a></p>
+{% endblock %}

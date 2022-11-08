@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Condition générales de vente
+{% endblock %}
+
+{% block body %}
+	<div class="cgv-wrapper">
+		{#              HEAD              #}
+		{{ include('template/_head_page.html.twig', {title: 'Condition générales de vente'}) }}
+		<div class="cgv-container">
+			{% if  cgv %}
+				{{ cgv|raw }}
+
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Plantes médicinales{% endblock %}
+
+{% block body %}
+
+    <div class="plants-details-wrapper">
+        <div class="container">
+        {#              HEAD             #}
+        {{ include ('template/_head_page.html.twig', {title: 'Des Plantes pour Les Hommes!'}) }}
+        {{ include ('plantes/plantsDetails/_plants_details_header.html.twig') }}
+        {#<div class="plants-details-separator"></div>#}
+        {{ include ('plantes/plantsDetails/_plants_details_main.html.twig') }}
+        {{ include ('plantes/plantsDetails/_plants_details_body.html.twig') }}
+        {{ include ('plantes/plantsDetails/_plants_details_comments.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

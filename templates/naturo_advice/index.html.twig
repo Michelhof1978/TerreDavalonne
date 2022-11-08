@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Conseil du naturo
+{% endblock %}
+
+{% block body %}
+	{#              HEAD             #}
+	<div class="container js-filter">
+		{{ include ('template/_head_page.html.twig', {title: 'Conseil du naturo'}) }}
+
+		{#              BAR_FILTER             #}
+		<div class="row">
+			<div class="col-lg-3 col-md-5">
+				<div class="row js-filter-form filter">
+					{% include 'naturo_advice/_naturo_bar_filter.html.twig' with {form: form, conseils: conseils} only %}
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-7 ">
+				<div class="row js-filter-content">
+					{% include 'naturo_advice/_conseils.html.twig'%}
+				</div>
+				<div class="row mt-30 float-right">
+					<div class="js-filter-pagination">
+						{# {% do pagination.setPageRange(2) %} #}
+						{{ knp_pagination_render(pagination, 'naturo_advice/_pagination.html.twig') }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,162 @@
+<div class="sidebar">
+	{{ form_start(form) }}
+	<div class="sidebar__item">
+			{{ form_row(form.q, {"attr": {"class": "form-control pl-30", "id": "site-search"}}) }}
+	</div>
+	{% if conseils.0.elementPhyto is defined %}
+		<div class="sidebar__item d-block">
+			<h4>J'ai mal à ...</h4>
+			<div class="form-check form-row">
+				{{ form_row(form.elementPhytos) }}
+			</div>
+		</div>
+	{% else %}
+		<div class="sidebar__item d-none">
+			<h4>J'ai mal à ...</h4>
+			<div class="form-check form-row">
+				{{ form_row(form.elementPhytos) }}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if conseils.0.elementBase is defined %}
+		<div class="sidebar__item d-block">
+			<h4>Element de base Gi Gong</h4>
+			<div class="form-check form-row">
+				{{ form_row(form.elementBases) }}
+			</div>
+		</div>
+	{% else %}
+		<div class="sidebar__item d-none">
+			<h4>Element de base Gi Gong</h4>
+			<div class="form-check form-row">
+				{{ form_row(form.elementBases) }}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if conseils.0.elementSabbat is defined %}
+		<div class="sidebar__item d-block">
+			<h4>Sabbat</h4>
+			<div class="form-check form-row">
+				{{ form_row(form.elementSabbats) }}
+			</div>
+		</div>
+	{% else %}
+		<div class="sidebar__item d-none">
+			<h4>Sabbat</h4>
+			<div class="form-check form-row">
+				{{ form_row(form.elementSabbats) }}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if conseils.0.price is defined %}
+		<div class="d-flex d-block">
+			<div class="sidebar__item">
+				<h4>Prix</h4>
+			</div>
+			<div class="row d-flex flex-column">
+				<div class="col-md-6">
+					<div class="sidebar__item">
+						{{ form_row(form.min) }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="sidebar__item">
+						{{ form_row(form.max) }}
+					</div>
+				</div>
+			</div>
+		</div>
+	{% else %}
+		<div class="d-flex d-none">
+			<div class="sidebar__item">
+				<h4>Prix</h4>
+			</div>
+			<div class="row d-flex flex-column">
+				<div class="col-md-6">
+					<div class="sidebar__item">
+						{{ form_row(form.min) }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="sidebar__item">
+						{{ form_row(form.max) }}
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+	{% if conseils.0.promotion is defined %}
+		<div class="row d-block">
+			<div class="sidebar__item">
+				<h4>Promotion</h4>
+				{{ form_row(form.promo) }}
+			</div>
+		</div>
+	{% else %}
+		<div class="row d-none">
+			<div class="sidebar__item">
+				<h4>Promotion</h4>
+				{{ form_row(form.promo) }}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if conseils.0.typeRecueil is defined %}
+		<div class="row d-block">
+			<div class="sidebar__item">
+				<h4>Type</h4>
+				{{ form_row(form.typeRecueil) }}
+			</div>
+		</div>
+	{% else %}
+		<div class="row d-none">
+			<div class="sidebar__item">
+				<h4>Type</h4>
+				{{ form_row(form.typeRecueil) }}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if conseils.0.typeRecette is defined %}
+		<div class="row d-block">
+			<div class="sidebar__item">
+				<h4>Type</h4>
+				{{ form_row(form.typeRecette) }}
+			</div>
+		</div>
+	{% else %}
+		<div class="row d-none">
+			<div class="sidebar__item">
+				<h4>Type</h4>
+				{{ form_row(form.typeRecette) }}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if conseils.0.type is defined %}
+		<div class="row d-block">
+			<div class="sidebar__item">
+				<h4>Type</h4>
+				{{ form_row(form.type) }}
+			</div>
+		</div>
+	{% else %}
+		<div class="row d-none">
+			<div class="sidebar__item">
+				<h4>Type</h4>
+				{{ form_row(form.type) }}
+			</div>
+		</div>
+	{% endif %}
+
+	<button type="submit" class="btn btn-primary w-50">Filtrer</button>
+	{{ form_end(form) }}
+	<div class="sidebar__item">
+		<h4>Derniers produits / Pub</h4>
+		<ul></ul>
+	</div>
+</div>

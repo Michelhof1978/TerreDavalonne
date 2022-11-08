@@ -1,0 +1,139 @@
+
+<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="background-color: #F7F7F7">
+    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <a class="d-flex  items-center justify-center mb-50 mt-50"  href={{path('app_home')}}>
+            <div class="mr-16">
+                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.71198 0.384356C5.05199 -0.0508579 5.68043 -0.128035 6.11564 0.211976C6.55086 0.551986 6.62804 1.18043 6.28802 1.61564L4.71198 0.384356ZM1.78802 7.37564C1.44801 7.81086 0.819571 7.88804 0.384356 7.54802C-0.0508575 7.20801 -0.128035 6.57957 0.211975 6.14436L1.78802 7.37564ZM0.211975 7.37565C-0.128035 6.94044 -0.0508575 6.312 0.384356 5.97199C0.819571 5.63197 1.44801 5.70915 1.78802 6.14437L0.211975 7.37565ZM6.28802 11.9044C6.62804 12.3396 6.55086 12.968 6.11564 13.308C5.68043 13.648 5.05199 13.5709 4.71198 13.1357L6.28802 11.9044ZM1 7.76C0.447716 7.76 0 7.31228 0 6.76C0 6.20772 0.447716 5.76 1 5.76V7.76ZM17 5.76C17.5523 5.76 18 6.20772 18 6.76C18 7.31228 17.5523 7.76 17 7.76V5.76ZM6.28802 1.61564L1.78802 7.37564L0.211975 6.14436L4.71198 0.384356L6.28802 1.61564ZM1.78802 6.14437L6.28802 11.9044L4.71198 13.1357L0.211975 7.37565L1.78802 6.14437ZM1 5.76H17V7.76H1V5.76Z" fill="black"/>
+                </svg>
+            </div>
+            <h3>Terre d'Avalonne</h3>
+        </a>
+        <div class="dashboard-menu">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                <li class="nav-item mb-16 {% if app.request.attributes.get('_route') == 'app_dashboard_home' %}active{% endif %}">
+                    <a class="d-flex"  href={{path('app_dashboard_home')}}>
+                        <div class="mr-16">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 9H6C8 9 9 8 9 6V4C9 2 8 1 6 1H4C2 1 1 2 1 4V6C1 8 2 9 4 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 9H18C20 9 21 8 21 6V4C21 2 20 1 18 1H16C14 1 13 2 13 4V6C13 8 14 9 16 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 21H18C20 21 21 20 21 18V16C21 14 20 13 18 13H16C14 13 13 14 13 16V18C13 20 14 21 16 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 21H6C8 21 9 20 9 18V16C9 14 8 13 6 13H4C2 13 1 14 1 16V18C1 20 2 21 4 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Dashboard</h4>
+                    </a>
+                </li>
+                <li class="nav-item mb-16 {% if app.request.attributes.get('_route') == 'app_dashboard_orders' %}active{% endif %}">
+                    <a class="d-flex "  href={{path('app_dashboard_orders')}}>
+                        <div class="mr-16">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 9H6C8 9 9 8 9 6V4C9 2 8 1 6 1H4C2 1 1 2 1 4V6C1 8 2 9 4 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 9H18C20 9 21 8 21 6V4C21 2 20 1 18 1H16C14 1 13 2 13 4V6C13 8 14 9 16 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 21H18C20 21 21 20 21 18V16C21 14 20 13 18 13H16C14 13 13 14 13 16V18C13 20 14 21 16 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 21H6C8 21 9 20 9 18V16C9 14 8 13 6 13H4C2 13 1 14 1 16V18C1 20 2 21 4 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Commandes</h4>
+                    </a>
+                </li>
+                <li class="nav-item mb-16 {% if app.request.attributes.get('_route') == 'app_dashboard_formations' %}active{% endif %}">
+
+                    <a class="d-flex "  href={{path('app_dashboard_formations')}}>
+                        <div class="mr-16">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 9H6C8 9 9 8 9 6V4C9 2 8 1 6 1H4C2 1 1 2 1 4V6C1 8 2 9 4 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 9H18C20 9 21 8 21 6V4C21 2 20 1 18 1H16C14 1 13 2 13 4V6C13 8 14 9 16 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 21H18C20 21 21 20 21 18V16C21 14 20 13 18 13H16C14 13 13 14 13 16V18C13 20 14 21 16 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 21H6C8 21 9 20 9 18V16C9 14 8 13 6 13H4C2 13 1 14 1 16V18C1 20 2 21 4 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Formations</h4>
+                    </a>
+                </li>
+                <li class="nav-item mb-16 {% if app.request.attributes.get('_route') == 'app_dashboard_event' %}active{% endif %}">
+
+                    <a class="d-flex"  href={{path('app_dashboard_event')}}>
+                        <div class="mr-16">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 9H6C8 9 9 8 9 6V4C9 2 8 1 6 1H4C2 1 1 2 1 4V6C1 8 2 9 4 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 9H18C20 9 21 8 21 6V4C21 2 20 1 18 1H16C14 1 13 2 13 4V6C13 8 14 9 16 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 21H18C20 21 21 20 21 18V16C21 14 20 13 18 13H16C14 13 13 14 13 16V18C13 20 14 21 16 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 21H6C8 21 9 20 9 18V16C9 14 8 13 6 13H4C2 13 1 14 1 16V18C1 20 2 21 4 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Mes évènements</h4>
+                    </a>
+                </li>
+                <li class="nav-item mb-16 {% if app.request.attributes.get('_route') == 'app_dashboard_products' %}active{% endif %}">
+
+                    <a class="d-flex"  href={{path('app_dashboard_products')}}>
+                        <div class="mr-16">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 9H6C8 9 9 8 9 6V4C9 2 8 1 6 1H4C2 1 1 2 1 4V6C1 8 2 9 4 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 9H18C20 9 21 8 21 6V4C21 2 20 1 18 1H16C14 1 13 2 13 4V6C13 8 14 9 16 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 21H18C20 21 21 20 21 18V16C21 14 20 13 18 13H16C14 13 13 14 13 16V18C13 20 14 21 16 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 21H6C8 21 9 20 9 18V16C9 14 8 13 6 13H4C2 13 1 14 1 16V18C1 20 2 21 4 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Mes produits</h4>
+                    </a>
+                </li>
+                <li class="nav-item mb-16 {% if app.request.attributes.get('_route') == 'app_dashboard_infos' %}active{% endif %}">
+
+                    <a class="d-flex"  href={{path('app_dashboard_infos')}}>
+                        <div class="mr-16">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 9H6C8 9 9 8 9 6V4C9 2 8 1 6 1H4C2 1 1 2 1 4V6C1 8 2 9 4 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 9H18C20 9 21 8 21 6V4C21 2 20 1 18 1H16C14 1 13 2 13 4V6C13 8 14 9 16 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 21H18C20 21 21 20 21 18V16C21 14 20 13 18 13H16C14 13 13 14 13 16V18C13 20 14 21 16 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 21H6C8 21 9 20 9 18V16C9 14 8 13 6 13H4C2 13 1 14 1 16V18C1 20 2 21 4 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Informations personnelles</h4>
+                    </a>
+                </li>
+                <li class="nav-item mb-16 {% if app.request.attributes.get('_route') == 'app_dashboard_support' %}active{% endif %}">
+
+                    <a class="d-flex "  href={{path('app_dashboard_support')}}>
+                        <div class="mr-16">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 9H6C8 9 9 8 9 6V4C9 2 8 1 6 1H4C2 1 1 2 1 4V6C1 8 2 9 4 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 9H18C20 9 21 8 21 6V4C21 2 20 1 18 1H16C14 1 13 2 13 4V6C13 8 14 9 16 9Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 21H18C20 21 21 20 21 18V16C21 14 20 13 18 13H16C14 13 13 14 13 16V18C13 20 14 21 16 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 21H6C8 21 9 20 9 18V16C9 14 8 13 6 13H4C2 13 1 14 1 16V18C1 20 2 21 4 21Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Support</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard-menu absolute bottom-0 ">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                <li class="nav-item mb-16 {% if app.request.attributes.get('_route') == 'app_dashboard_settings' %}active{% endif %}">
+                    <a class="d-flex"  href={{path('app_dashboard_settings')}}>
+                        <div class="mr-16">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 11.8801V10.1201C1 9.08006 1.85 8.22006 2.9 8.22006C4.71 8.22006 5.45 6.94006 4.54 5.37006C4.02 4.47006 4.33 3.30006 5.24 2.78006L6.97 1.79006C7.76 1.32006 8.78 1.60006 9.25 2.39006L9.36 2.58006C10.26 4.15006 11.74 4.15006 12.65 2.58006L12.76 2.39006C13.23 1.60006 14.25 1.32006 15.04 1.79006L16.77 2.78006C17.68 3.30006 17.99 4.47006 17.47 5.37006C16.56 6.94006 17.3 8.22006 19.11 8.22006C20.15 8.22006 21.01 9.07006 21.01 10.1201V11.8801C21.01 12.9201 20.16 13.7801 19.11 13.7801C17.3 13.7801 16.56 15.0601 17.47 16.6301C17.99 17.5401 17.68 18.7001 16.77 19.2201L15.04 20.2101C14.25 20.6801 13.23 20.4001 12.76 19.6101L12.65 19.4201C11.75 17.8501 10.27 17.8501 9.36 19.4201L9.25 19.6101C8.78 20.4001 7.76 20.6801 6.97 20.2101L5.24 19.2201C4.33 18.7001 4.02 17.5301 4.54 16.6301C5.45 15.0601 4.71 13.7801 2.9 13.7801C1.85 13.7801 1 12.9201 1 11.8801Z" stroke="#4C4C4C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Paramètres</h4>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex"  href={{path('app_home')}}>
+                        <div class="mr-16">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4414 11.62L17.0014 9.06L14.4414 6.5" stroke="#A65959" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.76172 9.06006H16.9317" stroke="#A65959" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.76172 17C4.34172 17 0.761719 14 0.761719 9C0.761719 4 4.34172 1 8.76172 1" stroke="#A65959" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4 class="dashboard-logout-text-logout">Déconnexion</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

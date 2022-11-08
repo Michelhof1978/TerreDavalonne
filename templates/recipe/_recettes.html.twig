@@ -1,0 +1,3 @@
+{% for recette in recettes %}
+	{% include 'recipe/_cardRecipe.html.twig' with {recette: recette} only %}
+{% endfor %}

@@ -1,0 +1,4 @@
+{% for event in events %}
+	{% include 'agenda/_cardEvent.html.twig' with {event: event} only %}
+{% endfor %}
+

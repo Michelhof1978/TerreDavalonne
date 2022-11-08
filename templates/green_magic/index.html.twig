@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Magie verte
+{% endblock %}
+
+{% block body %}
+	{#              HEAD             #}
+	<div class="container js-filter">
+		{{ include ('template/_head_page.html.twig', {title: 'Magie Verte'}) }}
+
+		{#              BAR_FILTER             #}
+		<div class="row">
+			<div class="col-lg-3 col-md-5">
+				<div class="row js-filter-form filter">
+					{% include 'green_magic/_magieVertes_bar_filter.html.twig' with {form: form, magieVertes: magieVertes} only %}
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-7 ">
+				<div class="row js-filter-content">
+					{% include 'green_magic/_magieVertes.html.twig'%}
+				</div>
+				<div class="row mt-30 float-right">
+					<div class="js-filter-pagination">
+						{{ knp_pagination_render(pagination, 'green_magic/_pagination.html.twig') }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

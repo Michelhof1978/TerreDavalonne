@@ -1,0 +1,10 @@
+.pm-five {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.pm-five > a > img{
+    width: auto;
+    max-width: 250px;
+    max-height: 250px;
+}

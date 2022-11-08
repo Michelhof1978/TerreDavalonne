@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Qui sommes-nous ?
+{% endblock %}
+
+{% block body %}
+	<div
+		class="qsn-wrapper">
+		{#              SECTION-QSN-1               #}
+		{{ include ('template/_head_page.html.twig', {title: 'Qui nous sommes ?'}) }}
+		{#              SECTION-QSN-2               #}
+		<div class="qsn-section-two-container">
+			{% for i in 0..2 %}
+				{% include 'who_are_we/_waw_section_two.html.twig' %}
+			{% endfor %}
+		</div>
+		{#              SECTION-QSN-3               #}
+		<div class="qsn-section-three-container">
+			{% include 'who_are_we/_waw_section_three.html.twig' %}
+		</div>
+		{#              SECTION-QSN-4               #}
+		<div class="qsn-section-two-container">
+			{% for i in 0..2 %}
+				{% include 'who_are_we/_waw_section_two.html.twig' %}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

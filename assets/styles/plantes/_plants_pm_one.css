@@ -1,0 +1,26 @@
+.pm-one {
+    width: auto;
+    overflow: hidden;
+    height: 13em;
+    max-height: 13em;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pm-one-info-media {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.pm-one-info-media > video {
+    width: 100%;
+    height: auto;
+}

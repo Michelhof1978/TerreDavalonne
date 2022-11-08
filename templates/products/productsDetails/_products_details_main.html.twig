@@ -1,0 +1,138 @@
+<div class="row">
+
+	<div class="col-lg-6 col-md-6">
+		<div class="product__details__pic js-nCarroussel">
+			<div class="product__details__pic__slider owl-carousel owl-loaded owl-drag">
+				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						{% for image in product.images %}
+						{% if loop.index == 1 %}
+						<div class="carousel-item active">
+							{% else %}
+							<div class="carousel-item">
+								{% endif %}
+								{% if image.name  %}
+									<img class="d-block w-100" data-imgbigurl="{{ asset("/images/products/" ~ image.name) }}" src="{{ asset("/images/products/" ~ image.name) }}" alt="products-pictures">
+								{% else %}
+									<img class="rounded-3 w-full" src="{{ asset('images/not_found_picture.png') }}"  alt="plants-pictures-not-found"/>
+								{% endif %}
+							</div>
+							{% endfor %}
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6">
+			<div class="product__details__text">
+				<h3>{{ product.name }}</h3>
+				<p>{{ product.price }} € </p>
+				<p>{{ product.description }}</p>
+			</div>
+			<div>
+
+				<section>
+					<form id="form-add-basket" action="" class="d-flex items-center">
+						<div class="qty d-flex mr-32">
+							<button class="qtyminus" aria-hidden="true">&minus;</button>
+							<input type="number" name="qty" id="qty" min="1" max="10" step="1" value="1">
+							<button class="qtyplus" aria-hidden="true">&plus;</button>
+						</div>
+						<a id="btn-primary">Ajouter au panier</a>
+					</form>
+					<ul style="border-top: 1px solid #ebebeb;padding-top: 40px;margin-top: 50px;">
+						<li><p>Availability In Stock</p></li>
+						<li><p>Shipping 01 day shipping. Free pickup today</p></li>
+						<li><p>Weight 0.5 kg</p></li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+	</div>
+	<style>
+		#btn-primary {
+			display: inline-block;
+			font-size: 14px;
+			padding: 16px 28px 14px;
+			margin-right: 6px;
+			margin-bottom: 5px;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 700;
+			background: #7fad39;
+			letter-spacing: 2px;
+			cursor: pointer;
+		}
+		#btn-primary:hover {
+			color: #0B0914;
+
+		}
+		#form-add-basket label {
+			flex: 1 0 100%;
+		}
+		#form-add-basket input {
+			width: 7rem; height: 3rem;
+			font-size: 1.3rem;
+			text-align: center;
+			background: #f5f5f5;
+			border: none;
+		}
+		#form-add-basket button {
+			border: none;
+			width: 3rem; height: 3rem;
+			color: #000;
+			font-size: 2rem;
+			background: #f5f5f5;
+		}
+	</style>
+	<script>
+		/*
+* @Adilade Input Quantity Increment
+*
+* Free to use - No warranty
+*/
+
+		const input = document.querySelector('#qty');
+		const btnminus = document.querySelector('.qtyminus');
+		const btnplus = document.querySelector('.qtyplus');
+
+		if (input !== undefined && btnminus !== undefined && btnplus !== undefined && input !== null && btnminus !== null && btnplus !== null) {
+
+			const min = Number(input.getAttribute('min'));
+			const max = Number(input.getAttribute('max'));
+			const step = Number(input.getAttribute('step'));
+
+			function qtyminus(e) {
+				const current = Number(input.value);
+				let newval = (current - step);
+				if(newval < min) {
+					newval = min;
+				} else if(newval > max) {
+					newval = max;
+				}
+				input.value = Number(newval);
+				e.preventDefault();
+			}
+
+			function qtyplus(e) {
+				const current = Number(input.value);
+				let newval = (current + step);
+				if(newval > max) newval = max;
+				input.value = Number(newval);
+				e.preventDefault();
+			}
+
+			btnminus.addEventListener('click', qtyminus);
+			btnplus.addEventListener('click', qtyplus);
+
+		} // End if test
+	</script>

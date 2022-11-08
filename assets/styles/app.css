@@ -1,0 +1,251 @@
+@import "template/_header.css";
+@import "template/_footer.css";
+@import "home/index.css";
+@import "qsn/index.css";
+@import "pdc/index.css";
+@import "faqs/index.css";
+@import "mentionsLegals/index.css";
+@import "cgv/index.css";
+@import "contactUs/index.css";
+@import "plantes/index.css";
+@import "plantes/plantsDetails/index.css";
+@import "shop/index.css";
+@import "product/index.css";
+@import "naturoAdvice/index.css";
+@import "auth/index.css";
+@import "greenMagic/index.css";
+@import "basket/index.css";
+@import "checkout/index.css";
+@import "dashboard/index.css";
+@import "normalize.css";
+@import "complement2S/css/complement.css";
+@import "bootstrap/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+/*#main {
+    padding-top: 9.5rem !important;
+}
+#main > div {
+    margin-top: 1rem !important;
+}*/
+body {
+    min-height: 100vh;
+    font-family: 'Cairo', sans-serif;
+    overflow-y: auto;
+}
+
+/*.header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}*/
+h1{
+    font-family: 'Cairo-bold', sans-serif;
+}
+a {
+    color: #0f172a;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+a:hover{
+    color: #7FAD39;
+    border: none;
+}
+
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+.js-filter {
+    margin-bottom: 10%;
+}
+/*              BAR FILTER              */
+.form-row {
+    overflow: auto;
+    max-height: 24em;
+
+}
+.sidebar__item > .form-check .form-row > div > div > div {
+    display: flex;
+    flex-direction: column;
+}
+#elementPhytos {
+    display: flex;
+    flex-direction: column;
+}
+#elementBases {
+    display: flex;
+    flex-direction: column;
+}
+#elementSabbats {
+    display: flex;
+    flex-direction: column;
+}
+#typeRecette {
+    display: flex;
+    flex-direction: column;
+}
+#typeRecueil {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card {
+    padding: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}.pricing-card-price {
+     font-style: normal;
+     font-weight: 700;
+     font-size: 32px;
+     line-height: 40px;
+     color: #0B0914;
+    margin-bottom: 32px;
+ }
+ .pricing-card-btn {
+     margin-bottom: 16px;
+     margin-top: 32px;
+     width: 352px;
+     height: 64px;
+     background: #2E6434;
+     border-radius: 12px;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 22px;
+     line-height: 40px;
+     /* identical to box height, or 182% */
+     text-align: center;
+     color: #FFFFFF;
+ }
+.pricing-card-btn:hover {
+    background: #7FAD39;
+}
+.calendar {
+    padding: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.datepicker-choose > .datepicker_div {
+    width: 218px;
+    height: 55px;
+    background: #7FAD39;
+    border-radius: 30px;
+}
+.datepicker-choose > .datepicker_div:last-child {
+    background: rgba(255, 0, 0, 1);
+}
+.datepicker-choose > .datepicker_div:last-child:hover {
+    background: rgba(255, 0, 0, .7);
+}
+.datepicker_div:hover {
+    background: rgba(127, 173, 57, .7);
+}
+.datepicker-choose > .datepicker_div > a > p{
+    color: #FFF;
+}
+#type {
+    display: flex;
+    flex-direction: column;
+}
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #82ae46 gray;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #82ae46;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid #82ae46;
+}
+
+/*              SEARCH              */
+#site-search{
+    padding-left: 32px;
+}
+
+/*                                  */
+.linkclass {
+    float: left;
+    cursor: pointer;
+    padding: 10px 15px 10px 10px;
+    background-color: light-grey;
+}
+#tabsDiv {
+    display: flex;
+    justify-content: center;
+
+}
+/* Button styling on mouse hover */
+#tabsDiv p:hover {
+    color: #198754;
+    border-bottom: 2px solid #e9e9e9;
+    font-size: 16px;
+}
+
+/* Change the color of the button */
+#tabsDiv p.active {
+    color: #198754;
+    border-bottom: 2px solid #e9e9e9;
+}
+
+/* Content for button tabs*/
+.contentClass {
+    display: none;
+    padding: 10px 16px;
+    border: 2px solid #c0c0c0;
+    border-radius: 12px;
+}
+
+@media (max-width: 991px) {
+    #auth-nav-item {
+        display: block!important;
+    }
+    #header-top-bar-left-row {
+        display: block!important;
+    }
+    #search-header {
+        display: block!important;
+    }
+    .header-top-bar-auth-row {
+        display: none;
+    }
+    .header-top-bar-search-row{
+        display: none;
+    }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

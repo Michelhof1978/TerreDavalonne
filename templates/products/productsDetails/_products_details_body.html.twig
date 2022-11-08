@@ -1,0 +1,107 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div
+				class="product__details__tab">
+			<!-- Link to each tab with onclick event -->
+			<div>
+				<div id="tabsDiv">
+					{% for option in product.options %}
+						<p class="linkClass cursor-pointer mr-32" onclick="displayContent(event, '{{ option.type }}')">
+							{{ option.type }}
+						</p>
+					{% endfor %}
+				</div>
+				<!-- Content for each HTML tab  -->
+				{% for option in product.options %}
+					<div id="{{ option.type }}" class="contentClass">
+						<p>
+							{{ option.content|raw }}
+						</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	#tabsDiv::before {
+		position: relative;
+		left: -36px;
+		top: 12px;
+		height: 1px;
+		width: 370px;
+		background: #a7a7a7;
+		content: "";
+	}
+	#tabsDiv::after {
+		position: relative;
+		right: 0;
+		top: 12px;
+		height: 1px;
+		width: 370px;
+		background: #a7a7a7;
+		content: "";
+	}
+	/* Button to open the content */
+	.linkclass {
+		float: left;
+		cursor: pointer;
+		padding: 10px 15px 10px 10px;
+		background-color: light-grey;
+	}
+	#tabsDiv {
+		display: flex;
+		justify-content: center;
+
+	}
+	/* Button styling on mouse hover */
+	#tabsDiv p:hover {
+		color: #198754;
+		border-bottom: 2px solid #e9e9e9;
+		font-size: 16px;
+	}
+
+	/* Change the color of the button */
+	#tabsDiv p.active {
+		color: #198754;
+		border-bottom: 2px solid #e9e9e9;
+	}
+
+	/* Content for button tabs*/
+	.contentClass {
+		display: none;
+		padding: 10px 16px;
+		border: 2px solid #c0c0c0;
+		border-radius: 12px;
+	}
+</style>
+
+<script>
+	function displayContent(event, contentNameID) {
+
+		let content = document.getElementsByClassName("contentClass");
+		let totalCount = content.length;
+
+// Loop through the content class
+// and hide the tabs first
+		for (let count = 0; count < totalCount; count++) {
+			content[count].style.display = "none";
+		}
+
+		let links = document.getElementsByClassName("linkClass");
+		totalLinks = links.length;
+
+// Loop through the links and
+// remove the active class
+		for (let count = 0; count < totalLinks; count++) {
+			links[count].classList.remove("active");
+		}
+
+// Display the current tab
+		document.getElementById(contentNameID).style.display = "block";
+
+// Add the active class to the current tab
+		event.currentTarget.classList.add("active");
+	}
+</script>

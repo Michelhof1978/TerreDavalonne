@@ -1,0 +1,14 @@
+{% extends "MailsBase.html.twig" %}
+    
+   {% block title %}Commande validée{% endblock %}
+
+   
+ <h2>Commande validée</h2>
+
+   {% block content %}
+
+   <p>Merci {{user.firstname}}, Votre commande numéro {{'id': order.id}} est validée</p>
+   <p>Vous pouvez consulter votre commande en cliquant sur le lien ci-dessous</p>
+   <p><a href="{{path('order_show', {'id': order.id})}}">Voir votre commande</a></p>
+   <p>L'équipe Terre D'Avalonne</p>
+   {% endblock %}

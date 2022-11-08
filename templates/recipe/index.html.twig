@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Recettes
+{% endblock %}
+
+{% block body %}
+	{#              HEAD             #}
+	<div class="container js-filter">
+		{{ include ('template/_head_page.html.twig', {title: 'Recettes'}) }}
+
+		{#              BAR_FILTER             #}
+		<div class="row">
+			<div class="col-lg-3 col-md-5">
+				<div class="row js-filter-form filter">
+					{% include 'recipe/_recipe_bar_filter.html.twig' with {form: form, recettes: recettes} only %}
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-7 ">
+				<div class="row js-filter-content">
+					{% include 'recipe/_recettes.html.twig'%}
+				</div>
+				<div class="row mt-30 float-right">
+					<div class="js-filter-pagination">
+						{# {% do pagination.setPageRange(2) %} #}
+						{{ knp_pagination_render(pagination, 'recipe/_pagination.html.twig') }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

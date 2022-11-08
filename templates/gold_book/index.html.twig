@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terredavalonne Livre d'or
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div>
+			{% for category, messages in app.flashes %}
+				{% for message in messages %}
+					<div class="alert alert-{{ category }}">
+						{{ message }}
+					</div>
+				{% endfor %}
+			{% endfor %}
+		</div>
+		<div>
+			<h1>Laissez nous un mot dans notre livre d'or</h1>
+
+			{{ form_start(form) }}
+			{{ form_widget(form) }}
+			<button>Envoyer</button>
+			{{ form_end(form) }}
+
+		</div>
+		<div>
+			<h1>Voici notre livre d'or</h1>
+
+			{% for book in books %}
+				<h4>Mot laissé par :
+					{{ book.userId.Firstname }} en date du 
+					{{ book.getCreatedAt()|date("d/m/Y") }}</h4>
+				<p>{{ book.comment }}</p>
+				{% if book.reponseGoldBook %}
+					<h4>Rèponse de {{ book.reponseGoldBook.userId.getFirstname() }} {{ book.reponseGoldBook.userId.getLastname() }} en date du {{ book.reponseGoldBook.getCreatedAt()|date("d/m/Y") }}</h4>
+					<p>{{ book.reponseGoldBook.getReponse() }}</p>
+				{% endif %}
+			{% else %}
+				Aucun mot trouvé.
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

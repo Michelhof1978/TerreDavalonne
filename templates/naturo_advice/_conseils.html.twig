@@ -1,0 +1,4 @@
+{% for conseil in conseils %}
+	{% include 'naturo_advice/_cardConseil.html.twig' with {conseil: conseil} only %}
+{% endfor %}
+

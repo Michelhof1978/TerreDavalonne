@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Boutique{% endblock %}
+
+{% block body %}
+    {#              HEAD             #}
+    {#{{ include ('template/_head_page.html.twig', {title: 'Boutique'}) }}#}
+    <section class="shop-wrapper">
+        <div class="container">
+            <div class="row">
+                {#              BAR_FILTER             #}
+                {{ include ('shop/_shop_bar_filter.html.twig') }}
+                {#              PRODOCT_SECTION_TOP             #}
+                {{ include ('shop/_shop_products_section_body.html.twig') }}
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{#
+<section class="shop-wrapper">
+    <div class="shop-container">
+        #}
+{#              BAR_FILTER             #}{#
+
+        {{ include ('shop/_shop_bar_filter.html.twig') }}
+        #}
+{#              PRODOCT_SECTION             #}{#
+
+        {{ include ('shop/_shop_products_section_body.html.twig') }}
+    </div>
+</section>#}

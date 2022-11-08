@@ -1,0 +1,17 @@
+{% extends "NewsletterBase.html.twig" %}
+    
+   {% block title %}Newsletter{% endblock %}
+     
+     
+ <h2>Newsletter</h2>
+
+   {% block content %}
+   {% block  %}{% endblock %}
+   <form action="{{ path('newsletter_send') }}" method="post">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" />
+    <input type="submit" value="Envoyer" />
+    </form>
+   <p>L'équipe Terre D'Avalonne</p>
+
+   {% endblock %}

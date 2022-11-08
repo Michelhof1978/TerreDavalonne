@@ -1,0 +1,35 @@
+<div class="pt-5 mt-5">
+	<h3 class="mb-5">{{ recette.comments|length }}
+		Commentaires</h3>
+	<ul class="comment-list">
+		{% for comment in recette.comments %}
+			<li class="comment">
+				<div class="comment-body">
+					<h3>{{ comment.user.firstname }}</h3>
+					<div class="meta">{{ comment.createdat|date ("d/m/Y") }}</div>
+					<p>{{ comment.comment }}</p>
+					{% if comment.reponseComment %}
+						<ul class="children">
+							<li class="comment">
+								<div class="comment-body">
+									<h3>{{ comment.reponseComment.user.firstName }}</h3>
+									<div class="meta">{{ comment.reponseComment.createdAt|date ("d/m/Y") }}</div>
+									<p>{{ comment.reponseComment.reponse }}</p>
+								</div>
+							</li>
+						</ul>
+					{% endif %}
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+
+
+<div class="comment-form-wrap pt-5">
+	<h3 class="mb-5">Laisser un commentare</h3>
+	{{ form_start(form) }}
+	{{ form_row(form.comment) }}
+	{{ form_end(form) }}
+
+</div></div>

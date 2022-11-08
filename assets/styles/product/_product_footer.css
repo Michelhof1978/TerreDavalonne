@@ -1,0 +1,37 @@
+.related-product {
+    padding-bottom: 30px;
+}
+
+.related__product__title {
+    margin-bottom: 70px;
+}
+.section-title {
+    margin-bottom: 50px;
+}
+.section-title h2 {
+    color: #1c1c1c;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+}
+.section-title h2::after {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 4px;
+    width: 80px;
+    background: #7fad39;
+    content: "";
+    margin: 0 auto;
+}
+.product__item {
+    margin-bottom: 50px;
+    width: 420px;
+    margin-right: 50px;
+}
+.product__item__pic {
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+}
+

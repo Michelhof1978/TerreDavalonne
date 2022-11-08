@@ -1,0 +1,15 @@
+.cvg-wrapper {
+    padding: 16px;
+}
+.cgv-container {
+    margin: 32px 0 32px 0 ;
+    border-radius: 12px;
+    text-align: center;
+    padding: 16px;
+    border: 1px solid #000;
+    background-color: #FAFAFA;
+    width: auto;
+}
+.cgv-container > p {
+    margin-bottom: 64px;
+}

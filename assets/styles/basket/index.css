@@ -1,0 +1,134 @@
+.table .thead-primary {
+    background: #82ae46;
+}
+
+.table {
+    min-width: 1000px !important;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse
+}
+.table .thead-primary tr th {
+    padding: 20px 10px;
+    color: #fff !important;
+    border: 1px solid transparent !important;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.table th {
+    font-weight: 500;
+}
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+th {
+    text-align: inherit;
+}
+.table tbody tr td {
+    text-align: center !important;
+    vertical-align: middle;
+    padding: 40px 10px;
+    border: 1px solid transparent !important;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+.table tbody tr td.product-remove a {
+    bordeR: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 4px 10px;
+    color: #000000;
+}
+.ion-ios-close::before {
+    content: "\f406";
+}
+.table tbody tr td.image-prod .img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.hero-wrap, .img, .blog-img, .user-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.table tbody tr td.product-name {
+    width: 30%;
+}
+.table tbody tr td.product-name h3 {
+    font-size: 16px;
+}
+.table tbody tr td.product-name p {
+    margin-top: 0;
+    color: gray;
+    margin-bottom: 1rem;
+}
+.table tbody tr td.total, .table tbody tr td.price {
+    color: #000000;
+}
+.table tbody tr td.quantity {
+    width: 20%;
+}
+/*              CART                */
+.cart-total {
+    width: 100%;
+    display: block;
+    border: 1px solid rgba(0,0,0,.05);
+    padding: 20px;
+}
+.cart-total h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.cart-total p {
+    width: 100%;
+    display: block;
+    color: grey;
+}
+.cart-total form .form-group {
+    margin-bottom: 1rem;
+}
+.cart-total form label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.cart-total form .form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+.cart-total form input {
+    height: 54px !important;
+    border: 1px solid rgba(0,0,0,.05) !important;
+    color: #000 !important;
+    padding: 0;
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 14px;
+    box-shadow: none !important;
+    background: #fff !important;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out , box-shadow .15s ease-in-out , -webkit-box-shadow .15s ease-in-out;
+}
+.pl-3, .px-3 {
+    padding-left: 1rem !important;
+}
+.px-3 {
+    padding-right: 1rem !important;
+}
+.btn.btn-primary:hover {
+    border: 1px solid #82ae46;
+    background: transparent;
+    color: #82ae46;
+}
+.btn {
+    transition: color .15s ease-in-out , background-color .15s ease-in-out , border-color .15s ease-in-out , box-shadow .15s ease-in-out , -webkit-box-shadow .15s ease-in-out;
+}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Mentions Légales
+{% endblock %}
+
+{% block body %}
+
+	<div
+		class="mentions-legals-wrapper">
+		{#              HEAD              #}
+		{{ include('template/_head_page.html.twig', {title: 'Mentions Légales'}) }}
+		<div class="mentions-legals-container">
+			{% if  mention %}
+				{{ mention|raw }}
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

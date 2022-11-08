@@ -1,0 +1,156 @@
+<header class="header">
+						<nav class="navbar navbar-expand-lg navbar-light bg-light">
+							<div
+									class="container-fluid">
+								{#<a class="navbar-brand" href="#">Navbar</a>#}
+								<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="toggler-icon top-bar"></span>
+									<span class="toggler-icon middle-bar"></span>
+									<span class="toggler-icon bottom-bar"></span>
+								</button>
+								<div class="collapse navbar-collapse" id="navbarSupportedContent">
+									<ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+										<li class="nav-item">
+											<a class="nav-link active" aria-current="page" href={{path('app_home')}}>Accueil</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href={{path('app_plantes')}}>Plantes</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href={{path('app_qi_gong')}}>Qi Gong</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href={{path('app_coaching')}}>Coaching</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href={{path('app_agenda')}}>Agenda</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href={{path('app_products')}}>Boutique</a>
+										</li>
+
+										<li class="nav-item">
+											<a class="nav-link" href={{path('app_recipe')}}>Recettes</a>
+										</li>
+										<li class="nav-item dropdown">
+											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+												Conseil | Histoire | Dico
+											</a>
+											<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+												<li>
+													<a class="dropdown-item" href={{path('app_naturo_advice')}}>Conseil du naturo</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href={{path('app_recueil')}}>Histoire&Dico botanique</a>
+												</li>
+												{#<li>
+													<hr class="dropdown-divider">
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</li>#}
+											</ul>
+										</li>
+										<li class="nav-item dropdown">
+											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+												Hypnose | Magie verte
+											</a>
+											<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+												<li>
+													<a class="dropdown-item" href={{path('app_hypnose')}}>Hypnose</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href={{path('app_green_magic')}}>Magie verte</a>
+												</li>
+											{#	<li>
+													<hr class="dropdown-divider">
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</li>#}
+											</ul>
+										</li>
+										<li class="nav-item d-none" id="auth-nav-item">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewbox="0 0 16 16">
+												<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+											</svg>
+										</li>
+										<li
+												class="nav-item d-none" id="auth-nav-item">
+
+											{#          SIGN_IN-SIGN_UP  &&  SEARCH_BAR            #}
+											{%if app.user %}
+												{%if app.user.roles[0] is same as("ROLE_ADMIN") %}
+													<a href={{path('admin')}}>Administration</a>
+												{%else%}
+													<a href={{ path('app_dashboard_home') }}>Mon Compte
+													</a>
+												{%endif%}
+												|
+												<a href="{{path('logout')}}">Déconnexion</a>
+											{%else%}
+												<a href="{{path('login')}}">Connexion</a>
+												|
+												<a href="{{path('app_sign-up')}}">Inscription</a>
+											{%endif%}
+										</li>
+									</ul>
+									{#          Logo && TITLE           #}
+									<a class="header-top-bar-left-row d-none" id="header-top-bar-left-row" href={{path('app_home')}}>
+										<img class="logoTerreDavalonne" src="{{ asset('img/logoTerreDavalonne.png') }}" alt="logo-terre-davalonne">
+										<h1 class="ml-10">Terre D'Avalonne</h1>
+									</a>
+
+									<form class="d-flex d-none" id="search-header">
+										<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+										<button class="btn btn-outline-success" type="submit">Search</button>
+									</form>
+					</li>
+			</div>
+		</div>
+	</nav>
+	{#          TOP_BAR           #}
+	<div
+			class="header-top-bar">
+		{#          Logo && TITLE           #}
+		<a class="header-top-bar-left-row" href={{path('app_home')}}>
+			<img class="logoTerreDavalonne" src="{{ asset('img/logoTerreDavalonne.png') }}" alt="logo-terre-davalonne">
+			<h1 class="ml-10">Terre D'Avalonne</h1>
+		</a>
+		{#          SIGN_IN-SIGN_UP  &&  SEARCH_BAR            #}
+		<div class="header-top-bar-right-row">
+			<div class="header-top-bar-search-row">
+				<input
+						class="form-control pl-30" placeholder="Recherche..." id="site-search" name="q">
+				{#<button class="btn-search">ok</button>#}
+				<label for="site-search" class="absolute">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</label>
+			</div>
+			<div style="margin: 0 8px 0 8px;">
+				<a href={{path('app_basket')}}>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewbox="0 0 16 16">
+						<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="header-top-bar-auth-row">
+				{%if app.user %}
+					{%if app.user.roles[0] is same as("ROLE_ADMIN") %}
+						<a href={{path('admin')}}>Administration</a>
+					{%else%}
+						<a href={{ path('app_dashboard_home') }}>Mon Compte
+						</a>
+					{%endif%}
+					|
+					<a href="{{path('logout')}}">Déconnexion</a>
+				{%else%}
+					<a href="{{path('login')}}">Connexion</a>
+					|
+					<a href="{{path('app_sign-up')}}">Inscription</a>
+				{%endif%}
+			</div>
+		</div>
+	</div>
+</header>

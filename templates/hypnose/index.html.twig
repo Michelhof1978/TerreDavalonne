@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page hypnose
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		{{ include ('template/_head_page.html.twig', {title: 'De l’Hypnose pour Les Hommes!'}) }}
+		<div class="plants-details-header-row d-flex justify-center">
+			<div class="d-flex justify-center p-16">
+				<video controls>
+					<source src="”http://techslides.com/demos/sample-videos/small.ogv”" type="video/ogg">
+				</video>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div
+						class="product__details__tab">
+					<!-- Link to each tab with onclick event -->
+					<div>
+						<div id="tabsDiv">
+								<p class="linkClass cursor-pointer mr-32" onclick="displayContent(event, 'test')">
+									Comment l’utiliser
+								</p>
+						</div>
+						<!-- Content for each HTML tab  -->
+							<div id="test" class="contentClass">
+								<p>
+									Comment l’utiliser
+								</p>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<style>
+			/* Button to open the content */
+			.linkclass {
+				float: left;
+				cursor: pointer;
+				padding: 10px 15px 10px 10px;
+				background-color: light-grey;
+			}
+			#tabsDiv {
+				display: flex;
+				justify-content: center;
+
+			}
+			/* Button styling on mouse hover */
+			#tabsDiv p:hover {
+				color: #198754;
+				border-bottom: 2px solid #e9e9e9;
+				font-size: 16px;
+			}
+
+			/* Change the color of the button */
+			#tabsDiv p.active {
+				color: #198754;
+				border-bottom: 2px solid #e9e9e9;
+			}
+
+			/* Content for button tabs*/
+			.contentClass {
+				display: none;
+				padding: 10px 16px;
+				border: 2px solid #c0c0c0;
+				border-radius: 12px;
+			}
+		</style>
+
+		<script>
+			function displayContent(event, contentNameID) {
+
+				let content = document.getElementsByClassName("contentClass");
+				let totalCount = content.length;
+
+// Loop through the content class
+// and hide the tabs first
+				for (let count = 0; count < totalCount; count++) {
+					content[count].style.display = "none";
+				}
+
+				let links = document.getElementsByClassName("linkClass");
+				totalLinks = links.length;
+
+// Loop through the links and
+// remove the active class
+				for (let count = 0; count < totalLinks; count++) {
+					links[count].classList.remove("active");
+				}
+
+// Display the current tab
+				document.getElementById(contentNameID).style.display = "block";
+
+// Add the active class to the current tab
+				event.currentTarget.classList.add("active");
+			}
+		</script>
+
+		{% if hypnose %}
+			{{ hypnose|raw }}
+		{% endif %}
+	</div>
+{% endblock %}

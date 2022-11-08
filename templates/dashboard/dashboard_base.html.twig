@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Dashboard{% endblock %}
+
+{% block body %}
+    <div class="dashboard-wrapper">
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                {% include 'dashboard/_dashboard_side.html.twig' %}
+                 <div class="dashboard-body  col py-3">
+                     {% include 'dashboard/_dashboard_header.html.twig' %}
+                     {% block body_dashboard %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

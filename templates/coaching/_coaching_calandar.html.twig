@@ -1,0 +1,29 @@
+<div class="calendar mt-30 mb-32">
+	<div>
+		<p>Choisissez une date</p>
+		{{ form_start(form) }}
+		{{ form_row(form.date) }}
+		<button type="submit" class="btn btn-primary w-30">rechercher</button>
+		{{ form_end(form) }}
+
+		<div class="row datepicker-choose text-center flex-wrap">
+			{% for creneau in creneaux %}
+				<div class="col-md-4  datepicker_div" style="margin: 0 auto;">
+					<a href="" class="">
+						<p style="padding: 16px">{{ creneau.heureDebut|format_datetime('none', 'short', locale='fr') }} - {{ creneau.heureFin|format_datetime('none', 'short', locale='fr') }}</p>
+					</a>
+				</div>
+			{% else %}
+				<p>pas de créneau pour ce jour là, choisissez une autre date</p>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<style>
+
+	/* Adapts a floating label for use with a left-handed input group icon */
+	.form-floating > .bi-calendar-date + .datepicker_input + label {
+		padding-left: 3.5rem;
+		z-index: 3;
+	}
+</style>

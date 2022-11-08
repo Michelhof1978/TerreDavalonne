@@ -1,0 +1,14 @@
+.contact-us-wrapper {
+    padding: 16px;
+}
+.contact-us-container {
+    margin: 32px 0 32px 0;
+    background-color: #AD9339;
+    border: 1px solid #7B6105;
+    border-radius: 12px;
+    padding: 32px;
+}
+.contact-us-form {
+    display: flex;
+    justify-content: center;
+}

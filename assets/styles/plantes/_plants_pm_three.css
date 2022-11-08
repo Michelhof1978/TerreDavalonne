@@ -1,0 +1,38 @@
+.pm-three {
+    width: 100%;
+    height: auto;
+    max-width: 932px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    padding: 16px;
+}
+.pm-three-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 16px;
+    max-height: 310px;
+}
+.pm-three-left-row {
+    width: 100%;
+    text-align: center;
+}
+.pm-three-right-row > img {
+    margin-bottom: 16px;
+    max-height: 208px;
+}
+.pm-three-right-row >  div {
+    background-color: rgba(222, 23, 23, .8);
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 30%;
+    max-height: 63px;
+    cursor: pointer;
+    color: #FFF;
+    margin: 0 auto;
+}
+.pm-three-right-row >  div:hover {
+    background-color: rgba(222, 23, 23, .4);
+}

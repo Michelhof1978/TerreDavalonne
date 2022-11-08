@@ -1,0 +1,96 @@
+{# {% include "code1.php" %} #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Plateforme de bien être"/>
+	<link rel="icon" type="image/png" href="{{ asset('img/logoTerreDavalonne.png') }}"/>
+
+	<title>
+		{% block title %}{% endblock %}
+	</title>
+	{% block stylesheets %}
+		{{ encore_entry_link_tags('css') }}
+	{% endblock %}
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Dancing+Script:wght@600;700&family=Ms+Madi&family=Updock&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/fr.js"></script>
+</head>
+
+<body>
+{% set current_path = app.request.get('_route') %}
+{% if 'dashboard' is not same as( current_path | split('_')[1])  %}
+	{% include 'template/_header.html.twig' %}
+{% endif %}
+
+<div id="main" style="padding-top: 0!important;">
+
+	{# read and display several types of flash messages #}
+	{% for label, messages in app.flashes(['success', 'warning']) %}
+		{% for message in messages %}
+			<div class="flash-{{ label }}">
+				{{ message }}
+			</div>
+		{% endfor %}
+	{% endfor %}
+	{% block body %}{% endblock %}
+	{{ render(controller(
+		'App\\Controller\\NewsletterController::index'
+	)) }}
+	{% if 'dashboard' is not same as( current_path | split('_')[1]) %}
+		{{ include ('template/_footer.html.twig', {param_g: []}) }}
+	{% endif %}
+</div>
+{# {% include "code2.php" %} #}
+
+
+{# <!-- Cookie Consent by https://www.PrivacyPolicies.com -->
+		<script type="text/javascript" src="www.privacypolicies.com/public/cookie-consent/4.0.0/cookie-consent.js" charset="UTF-8"></script>
+		<script type="text/javascript" charset="UTF-8">
+			document.addEventListener('DOMContentLoaded', function () {
+				cookieconsent.run({
+			{% block body %}{% endblock %}
+			{% if 'dashboard' is not same as( current_path | split('_')[1]) %}
+				{{ include ('template/_footer.html.twig', {param_g: []}) }}
+			{% endif %}
+		</div>
+			{# {% include "code2.php" %} #}
+
+			{% block javascripts %}
+				{{ encore_entry_script_tags('app') }}
+			{% endblock %}
+			<!-- Cookie Consent by https://www.PrivacyPolicies.com -->
+			<script type="text/javascript" src="www.privacypolicies.com/public/cookie-consent/4.0.0/cookie-consent.js" charset="UTF-8"></script>
+			<script type="text/javascript" charset="UTF-8">
+				document.addEventListener('DOMContentLoaded', function () {
+					cookieconsent.run({
+					"notice_banner_type": "headline",
+					"consent_type": "express",
+					"palette": "dark",
+					"language": "fr",
+					"page_load_consent_levels": ["strictly-necessary"],
+					"notice_banner_reject_button_hide": false,
+					"preferences_center_close_button_hide": false,
+					"page_refresh_confirmation_buttons": false,
+					"website_name": "Terre d'Avalonne",
+					"website_privacy_policy_url": "http://localhost:8000/p/d/c"
+				});
+			});
+		</script>
+
+		<noscript>Cookie Consent by
+			<a href="https://www.privacypolicies.com/" rel="nofollow noopener">Privacy Policies Generator website</a>
+		</noscript>
+		<!-- End Cookie Consent --> #}
+<script src="https://kit.fontawesome.com/a9becd4f18.js" crossorigin="anonymous"></script>
+</body>
+</html>

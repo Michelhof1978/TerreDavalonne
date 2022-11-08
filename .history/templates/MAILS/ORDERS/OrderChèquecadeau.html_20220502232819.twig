@@ -1,0 +1,11 @@
+{% extends "OrderBase.html.twig" %}
+
+<h2>Chèque Cadeau</h2>
+
+{% block content %}
+
+ <p>Bonjour, {{user.firstname}}{{user.lastname}} vous a offer un bon d'achat d'un montant de {{}} à déduire à votre prochaine commande </p>
+ <p>{{user.chqkdoCode}}</p>
+<p>A bientôt sur notre site.</p>
+   <p>L'équipe Terre D'Avalonne</p>
+{% endblock %}

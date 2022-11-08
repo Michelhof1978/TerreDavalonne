@@ -1,0 +1,101 @@
+.home-section-one {
+    padding: 32px;
+}
+.home-btn {
+    width: 240px;
+    text-align: center;
+}
+.home-row {
+    border-radius: 150px;
+    width: 240px;
+    height: 240px;
+    background-color: #E3EEE3;
+    border: 2px solid #084003;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.home-row:hover {
+    width: 280px;
+    height: 280px;
+
+}
+
+.home-circle {
+    background: #e4b2d6;
+    line-height: 1.3;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.home-circle:hover {
+    width: 150px;
+    height: 150px;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.home-in-circle-border{
+    border: 1px solid #FFF;
+    border-radius: 100px;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.home-section-two-row {
+    padding: 32px;
+}
+.home-section-two {
+    background-color: #C8B572;
+    border: 3px solid #7B6105;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    color: #FFF;
+    max-width: 312px;
+    margin-bottom: 16px;
+}
+.home-section-two > img {
+    margin-bottom: 8px;
+}
+.home-section-two > video {
+    margin-bottom: 8px;
+}
+.home-section-bottom-row {
+    height: auto;
+    max-height: 200px;
+    background-color: #FFF;
+    width: auto;
+    max-width: 200px;
+    border-radius: 12px;
+    padding: 8px;
+    margin: 0 auto;
+
+}
+.home-section-bottom-row > p{
+    color: #000;
+}
+.home-section-five {
+    border: 1px solid #000;
+    border-radius: 12px;
+    width: auto;
+    max-width: 602px;
+}

@@ -1,0 +1,64 @@
+/*              SIGN_UP_FORM                */
+.half, .half .container > .row {
+    height: 100vh;
+    min-height: 900px;
+}
+.half .bg {
+    width: 20%;
+    height: 100%;
+}
+.order-1 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+.order-2 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+.half .contents {
+    background: #f6f7fc;
+    width: 80%;
+    height: 100%;
+}
+.contents .container {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 8px;
+}
+.container h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.container p {
+    color: #b3b3b3;
+    font-weight: 300;
+}
+@media (max-width: 992px) {
+
+    .half .contents, .half .bg {
+        width: 100%;
+    }
+    .half .bg {
+        height: 200px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .order-md-2 {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+@media (min-width: 576px) {
+    .contents > .container {
+        max-width: 540px;
+    }
+}

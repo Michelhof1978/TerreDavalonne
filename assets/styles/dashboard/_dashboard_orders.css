@@ -1,0 +1,25 @@
+.dashboard-orders table {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.dashboard-orders table {
+    width: 100%;
+    text-align: center;
+}
+.dashboard-orders table thead tr th {
+    border-bottom: 3px solid #ebebeb;
+}
+.dashboard-orders table tbody tr td {
+    border-bottom: 1px solid #ebebeb;
+}
+.dashboard-orders table thead th {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1c1c;
+    padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .dashboard-orders table {
+        max-width: 720px;
+    }
+}

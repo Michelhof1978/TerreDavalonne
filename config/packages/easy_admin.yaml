@@ -1,0 +1,19 @@
+easy_admin:
+  design:
+    form_theme:
+      - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+      - '@VichUploader/Form/fields.html.twig'
+  
+  entities:
+    Plante:
+      list:
+        fields:
+          - { property: 'lienPhoto', type: 'file', base_path: '%app.path.plante_images%' }
+#, template: 'vich/vich_uploader_image.html.twig'
+      show:
+        fields:
+          - { property: 'lienPhoto', type: 'image', base_path: '%app.path.plante_images%' }
+
+      # form:
+      #   fields:
+      #     - { property: 'lienPhotoFile', type: 'vich_image' }

@@ -1,0 +1,16 @@
+<div class="mt-30 mb-32">
+	{% for faq in faqs %}
+		{% if loop.index == 1 %}
+			<details open>
+		{% else %}
+			<details>
+		{% endif %}
+		<summary>
+			{{ faq.question }}
+		</summary>
+		<div>
+			{{ faq.reponse }}
+		</div>
+	</details>
+	{% endfor %}
+</div>

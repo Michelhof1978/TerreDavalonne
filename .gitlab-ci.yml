@@ -1,0 +1,23 @@
+stages:
+  - deploy_preprod
+cache:
+  paths:
+    - vendor/
+before_script:
+  - apt-get update && apt-get install openssh-client
+  - mkdir -p ~/.ssh
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+  - chmod 700 ~/.ssh/*
+  - eval "$(ssh-agent -s)"
+  - ssh-add ~/.ssh/id_rsa
+  - ssh-keyscan -H -p $PORT '51.254.35.173' >> ~/.ssh/known_hosts
+
+send_to_pre_production:
+  stage: deploy_preprod
+  script:
+    - echo "ok"
+    - ssh $USER@$HOST -p $PORT "cd /var/www/preprod.terredavalonne/ && sudo git checkout devlops && sudo git pull && sudo composer install &&  sudo yarn encore dev && php bin/console cache:clear && sudo chmod -R 777 var/ && sudo chmod -R 777 tmp/"
+  only:
+    - devlops
+  when: manual
+

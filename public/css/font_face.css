@@ -1,0 +1,61 @@
+
+@font-face {
+  font-family: 'Cairo-ExtraLight';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Cairo/static/Cairo-ExtraLight.ttf')format('ttf');
+}
+
+@font-face {
+  font-family: 'Cairo-Light';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Cairo/static/Cairo-Light.ttf')format('ttf');
+
+}
+
+@font-face {
+  font-family: 'Cairo-Regular';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Cairo/static/Cairo-Regular.ttf')format('ttf');
+
+}
+
+@font-face {
+  font-family: 'Cairo-Medium';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Cairo/static/Cairo-Medium.ttf')format('ttf');
+
+}
+
+@font-face {
+  font-family: 'Cairo-SemiBold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Cairo/static/Cairo-SemiBold.ttf')format('ttf');
+
+}
+
+@font-face {
+  font-family: 'Cairo-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Cairo/static/Cairo-Bold.ttf')format('ttf');
+}
+
+@font-face {
+  font-family: 'Cairo-ExtraBold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Cairo/static/Cairo-ExtraBold.ttf')format('ttf');
+
+}
+@font-face {
+  font-family: 'Cairo-Black';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Cairo/static/Cairo-Black.ttf')format('ttf');
+
+}

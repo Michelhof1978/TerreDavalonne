@@ -1,0 +1,18 @@
+<div class="text-center mb-60">
+	<div class="plants-details-header-row d-flex justify-center">
+		<img alt="" src={{ asset("/images/recettes/" ~ recette.imageHeader) }}>
+		<div class="d-flex justify-center p-16">
+			<video controls>
+				<source src="”http://techslides.com/demos/sample-videos/small.ogv”" type="video/ogg">
+				<source src="/build/videos/arcnet.io(7-sec).mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+	<div>
+		{# <p>
+			{% for elementBase in recette.elementBase %}
+				<a class="btn btn-primary py-2 px-3" style="background: {{ elementBase.color }} !important;">{{ elementBase.name }}</a>
+			{% endfor %}
+		</p> #}
+	</div>
+</div>

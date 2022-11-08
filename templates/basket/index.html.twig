@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Panier
+{% endblock %}
+
+{% block body %}
+	<div>
+		{{ include ('template/_head_page.html.twig', {title: 'Panier'}) }}
+		<div class="p-6-rem" style="  margin-bottom: 3rem;">
+			<div class="m-auto w-full pr-15 pl-15">
+				<div class="overflow-auto">
+					<table class="table">
+						<thead class="thead-primary">
+							<tr class="text-center">
+								<th scope="col"></th>
+								<th scope="col"></th>
+								<th scope="col">Produit</th>
+								<th scope="col">Prix</th>
+								<th scope="col">Quantities</th>
+								<th scope="col">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for element in dataPanier %}
+								<tr class="text-center">
+									<td class="product-remove">
+										<a href='{{path("app_basket_delete_coaching", {id: element.product.id})}}'>
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewbox="0 0 16 16">
+												<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+										</a>
+									</td>
+									<td class="image-prod">
+										<div class="img" style="background-image:url('https://preview.colorlib.com/theme/vegefoods/images/xproduct-3.jpg.pagespeed.ic.J11-RQjosA.webp')"></div>
+									</td>
+									<td class="product-name">
+										<h3>{{ element.product.name }}</h3>
+										<p>{{ element.product.presentation }}</p>
+									</td>
+									<td class="price">{{ element.product.price }} €</td>
+									<td class="quantity">
+                                        <a href='{{path("app_basket_add_coaching", {id: element.product.id})}}'><i class="fa fa-add"></i></a><p>{{ element.quantite }}</p><a href='{{path("app_basket_remove_coaching", {id: element.product.id})}}'><i class="fa fa-minus"></i></a>
+										{# <div class="input-group mb-3">
+											<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+										</div> #}
+									</td>
+									<td class="total">{{ element.quantite * element.product.price }} €</td>
+								</tr>
+							{% else %}
+								<tr>
+									<td colspan="6" class="text-center">Votre panier est vide</td>
+								</tr>
+							{% endfor %}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="mt-30">
+				<div class="mt-10">
+					<div class="cart-total mb-10">
+						<h3>Coupon Code</h3>
+						<p>Enter your coupon code if you have one</p>
+						<form action="#" class="info">
+							<div class="form-group">
+								<label for="">Coupon code</label>
+								<input type="text" class="form-control text-left px-3" placeholder="">
+							</div>
+						</form>
+					</div>
+					<div class="btn btn-primary py-3 px-4 w-20-100 text-center">Apply Coupon</div>
+				</div>
+			</div>
+			<div class="mt-5 cart-wrap ftco-animate fadeInUp ftco-animated">
+				<div class="cart-total mb-3">
+					<h3>Estimate shipping and tax</h3>
+					<p>Enter your destination to get a shipping estimate</p>
+					<form action="#" class="info">
+						<div class="form-group">
+							<label for="">Country</label>
+							<input type="text" class="form-control text-left px-3" placeholder="">
+						</div>
+						<div class="form-group">
+							<label for="country">State/Province</label>
+							<input type="text" class="form-control text-left px-3" placeholder="">
+						</div>
+						<div class="form-group">
+							<label for="country">Zip/Postal Code</label>
+							<input type="text" class="form-control text-left px-3" placeholder="">
+						</div>
+					</form>
+				</div>
+				<p>
+					<a class="btn btn-primary py-3 px-4" href={{ path('app_checkout')}}>Estimate</a>
+				</p>
+			</div>
+			<div class="mt-5 cart-wrap ftco-animate fadeInUp ftco-animated">
+				<div class="cart-total mb-3">
+					<h3>sous-total</h3>
+					<p class="d-flex">
+						<span>total HT</span>
+						<span>{{ total }} €</span>
+					</p>
+					<p class="d-flex">
+						<span>Frais de livraison</span>
+						<span>{{ totalTransport }} €</span>
+					</p>
+					<p class="d-flex">
+						<span>Total TVA</span>
+						<span>{{ totalTVA }} €</span>
+					</p>
+					<hr>
+					<p class="d-flex total-price">
+						<span>Total Toutes Taxes Comprises</span>
+						<span>{{ totalTTC }} €</span>
+					</p>
+				</div>
+				<p>
+					<a class="btn btn-primary py-3 px-4" href={{path('app_checkout')}}>Proceed to Checkout</a>
+				</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Politique de confidentialiée{% endblock %}
+
+{% block body %}
+<div class="pdc-wrapper">
+    <div class="pdc-container">
+        {% if  pdc %}
+            {{ pdc|raw }}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

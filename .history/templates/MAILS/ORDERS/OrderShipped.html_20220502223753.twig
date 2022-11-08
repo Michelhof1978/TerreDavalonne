@@ -1,0 +1,13 @@
+{% extends "MailsBase.html.twig" %}
+    
+   {% block title %}Commande expédiée{% endblock %}
+
+    
+ <h2>Commande expédiée</h2>
+
+   {% block content %}
+   <p>Bonjour {{user.firstname}}, Votre commande a été expédiée</p>
+   <p>Vous pouvez suivre l'état de votre commande en cliquant sur le lien ci-dessous</p>
+   <p>{{path('order_show', {'id': order.id})}}</p>
+   {% endblock %}
+   {% endblock %}

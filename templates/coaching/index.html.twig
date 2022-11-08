@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Coaching
+{% endblock %}
+
+{% block body %}
+
+	<div class="container">
+		{{ include ('template/_head_page.html.twig', {title: 'COACHING VIDEO EN LIVE'}) }}
+		<div class="row">
+			<div class="col">
+				<h3 class="text-center">Participer à nos coaching sur Qi Gong!</h3>
+				{{ include('coaching/_coaching_accordeon.html.twig') }}
+			</div>
+		</div>
+		<div class="row mt-30 mb-32">
+			{% for product in products %}
+				{{ include('coaching/_coaching_pricing_card.html.twig') }}
+			{% endfor %}
+		</div>
+		<div class="row mt-30 mb-32">
+			{{ include('coaching/_coaching_calandar.html.twig') }}
+		</div>
+		<div>
+			<p>Si vous avez une questions qui n’est pas dans le Faqs, émail coach <a class="py-2 d-block" href={{path('app_contact_us')}}>Erik</a></p>
+		</div>
+	</div>
+{% endblock %}

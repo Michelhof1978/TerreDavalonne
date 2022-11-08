@@ -1,0 +1,43 @@
+<div class="col-lg-6 col-md-6 col-sm-6 mb-32">
+	<div>
+		<div>
+			<a class="block-20" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+				{% if not plante.images.0  %}
+				<img class="rounded-3" src="{{ asset("/images/plantes/" ~ plante.images.0) }}"  alt="plants-pictures"/>
+				{% else %}
+				<img class="rounded-3" src="{{ asset('images/not_found_picture.png') }}"  alt="plants-pictures-not-found"/>
+				{% endif %}
+			</a>
+		</div>
+		<div class="text d-block ">
+			<div class="meta mb-3 d-flex">
+				<p>{{ plante.createdat|date("d/m/Y") }}</p>
+				<p>Admin</p>
+			</div>
+			<h3 class="heading">
+				{{ plante.name }}
+			</h3>
+			<p class="heading-description mb-30">{{ plante.presentation }}</p>
+			<div class="d-flex justify-between">
+				<p>
+					<a class="btn btn-primary py-2 px-3" href="{{ path("app_plantes_details", {id: plante.id}) }}">Voir</a>
+				</p>
+				<p>
+					{% for elementP in plante.elementPhytos %}
+						<em class="text-muted text-primary text-italic">#{{ elementP.name }}</em>
+					{% endfor %}
+				</p>
+				<p>
+					{% for elementS in plante.elementSabbats %}
+						<em class="text-muted text-primary text-italic">#{{ elementS.name }}</em>
+					{% endfor %}
+				</p>
+				<p>
+					{% for elementBase in plante.elementBases %}
+						<a class="btn btn-primary py-2 px-3" style="background: {{ elementBase.color }} !important;">{{ elementBase.name }}</a>
+					{% endfor %}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

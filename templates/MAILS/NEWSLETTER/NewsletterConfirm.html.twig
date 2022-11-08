@@ -1,0 +1,15 @@
+{% extends "MAILS/NEWSLETTER/NewsletterBase.html.twig" %}
+
+{% block title %}Confirmation Newsletter
+{% endblock %}
+
+
+{% block content %}
+	<h2>Confirmation inscription Newsletter</h2>
+
+	<p>Bonjour,</p>
+	<p>Pour valider votre inscription à notre newsletter, veuillez cliquer sur le lien suivant :
+		<a href="{{ absolute_url(path('app_confirm', {id: diffusion.id, token: token})) }}">{{ absolute_url(path('app_confirm', {id: diffusion.id, token: token})) }}</a>
+	</p>
+	<p>L'équipe Terre D'Avalonne</p>
+{% endblock %}

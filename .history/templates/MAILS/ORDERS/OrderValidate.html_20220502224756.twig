@@ -1,0 +1,10 @@
+{% extends "MailsBase.html.twig" %}
+    
+   {% block title %}Commande validée{% endblock %}
+
+   
+ <h2>Commande validée</h2>
+
+   {% block content %}
+   <p>Merci {{user.firstname}}, Votre commande numéro {{'id': order.id}} est validée</p>
+   {% endblock %}

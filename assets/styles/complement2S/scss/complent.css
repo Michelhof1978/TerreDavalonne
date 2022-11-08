@@ -1,0 +1,51 @@
+/*
+Error: Invalid CSS after ".w-0.": expected class name, was "5"
+        on line 409 of complent.scss
+
+
+
+Backtrace:
+complent.scss:409
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/parser.rb:1278:in `expected'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/parser.rb:1208:in `expected'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/static_parser.rb:197:in `class_selector'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/static_parser.rb:165:in `simple_selector_sequence'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/static_parser.rb:111:in `selector'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/static_parser.rb:86:in `selector_comma_sequence'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/parser.rb:1186:in `expr!'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/scss/static_parser.rb:20:in `parse_selector'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+C:/RailsInstaller/Ruby2.3.3/bin/sass:22:in `load'
+C:/RailsInstaller/Ruby2.3.3/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \".w-0.\": expected class name, was \"5\"\A         on line 409 of complent.scss\A \A 404:   *******************************************\A 405: */\A 406: \A 407: /* --------------- WIDTH ------------- */\A 408: .w-0 {width: 0;}\A 409: .w-0.5 {width: 0.125rem;}\A 410: .w-1 {width: 0.25rem;}\A 411: .w-1.5 {width: 0.375rem;}\A 412: .w-2 {width: 0.5rem;}\A 413: .w-2.5 {width: 0.625rem;}\A 414: .w-3 {width: 0.75rem;}"; }

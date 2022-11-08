@@ -1,0 +1,10 @@
+
+.plants-details-wrapper{
+    padding: 16px;
+}
+.plants-details-separator {
+    margin: 0 auto;
+    height: 1px;
+    width: 60%;
+    background-color: #000;
+}

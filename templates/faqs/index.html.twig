@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Faqs
+{% endblock %}
+
+{% block body %}
+	<div
+		class="faqs-wrapper">
+		{#              HEAD              #}
+		{{ include('template/_head_page.html.twig', {title: 'Faqs'}) }}
+		{#              SECTION FAQS ONE              #}
+		<div>
+			<p></p>
+		</div>
+		{#              FAQS ACCORDEON               #}
+		<div class="faqs-accordion-row">
+			{{include('faqs/_faqs_accordeon.html.twig')}}
+
+		</div>
+		<a class="py-2 d-block" href={{path('app_contact_us')}}>
+			<div class="faqs-btn">
+				<p>
+					Poser nous votre question
+				</p>
+			</div>
+		</a>
+	</div>
+{% endblock %}

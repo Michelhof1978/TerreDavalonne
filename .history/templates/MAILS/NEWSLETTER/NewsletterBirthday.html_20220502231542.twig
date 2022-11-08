@@ -1,0 +1,20 @@
+{% extends "NewsletterBase.html.twig" %}
+
+    <h2>Joyeux Anniversaire</h2>
+    
+    {% block content %}
+<p><strong>Bonjour {{user.firstname}},</strong></p>
+<p>Terre D'Avalonne vous souhaite un joyeux anniversaire !</p>
+<p>C'est avec un grand plaisir ,que nous vous offrons un code réduction à valable 1  :</p>
+
+<p>{{user.giftCode}}</p>
+
+
+<p>Nous vous souhaitons une bonne journée !</p>
+<p>L'équipe Terre D'Avalonne</p>
+
+
+    {% endblock %}
+
+
+        

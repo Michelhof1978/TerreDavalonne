@@ -1,0 +1,5 @@
+
+{% for plante in plantes %}
+	{% include 'plantes/_cardPlante.html.twig' with {plante: plante} only %}
+{% endfor %}
+

@@ -1,0 +1,17 @@
+.pm-four {
+    width: 300px;
+    height: auto;
+    border: 1px solid #7B6105;
+    border-radius: 12px;
+    margin: 0 32px 32px 0;
+    padding: 16px;
+    text-align: center;
+}
+
+.pm-four-row {
+    width: auto;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 12px;
+    padding: 8px;
+}

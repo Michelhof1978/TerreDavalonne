@@ -1,0 +1,36 @@
+@import "_shop_products.css";
+@import "_shop_products_grid.css";
+h2 {
+    font-size: 36px;
+}
+.shop-wrapper {
+    padding: 80px 16px;
+}
+.shop-container {
+    display: flex;
+    overflow: hidden;
+}
+.shop-row {
+    padding: 64px;
+    position: relative;
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+.sidebar {
+
+}
+.sidebar__item {
+    margin-bottom: 35px;
+}
+.sidebar__item h4 {
+    color: #1c1c1c;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.sidebar__item ul li  {
+    font-size: 16px;
+    color: #1c1c1c;
+    line-height: 39px;
+    display: block;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter</title>
+  <link rel="stylesheet" href="/Newsletter.css" type="text/css">
+  <script src="https://kit.fontawesome.com/a9becd4f18.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+    
+      
+    <nav>
+
+         <img class="logoTerreDavalonne" src="/assets/newslettersAssets/logoTerreDavalonne.png" alt="logo terre d'avalonne" > <h1>Terre D'Avalonne</h1>
+
+        
+
+          
+              <ul>
+                  <li>
+                      <a href="">Accueil</a>
+                  </li>
+  
+                  <li>
+                      <a href="">Plantes</a>
+                  </li>
+  
+                  <li class>
+                      <a href="">Qi Gong</a>
+                  </li>
+
+                  <li>
+                    <a href="">Qi Gong</a>
+                </li>
+
+                <li>
+                  <a href="">Hypnose</a>
+              </li>
+
+              <li>
+                <a href="">Boutique</a>
+            </li>
+
+            <li>
+              <a href="">Promos</a>
+          </li>
+
+          <li>
+            <a href="">Blog</a>
+        </li>
+
+        <li>
+          <a href="">Méditation</a>
+      </li>
+
+      <li>
+        <a href="">Stage</a>
+    </li>
+                  
+              </ul>
+
+              <div>
+               {% if app.user %}
+              <a href="{{path('account')}}">Mon Compte <small> ({{ app.user.firstname}})</small></a>  |  <a href="{{path('app_logout')}}">Déconnexion</a>
+              {% else %}
+              <a href="{{path('app_login')}}">Connexion</a>  |  <a href="{{path('registrer')}}">Inscription</a>
+              {% endif %}
+              </div>
+  
+             
+  
+        
+      </nav>
+        
+      
+    
+  
+
+
+
+    
+
+
+<footer>
+   
+    
+    
+    <p>
+      <a href="http://terredavalonne.com//">Terre d'Avalonne Co</a>
+    </p>    
+   
+    <p>
+      <p>Veuillez-nous suivre sur les réseaux</p>
+     
+      <button class="reseaux"><a href="https://www.youtube.com/results?search_query=terre+d%27avalonne" <i class="fa-brands fa-youtube" style="font-size:20px;text-decoration:none;color:black;"></i></a></button>
+      <button class="reseaux"><a href="https://www.instagram.com/terredavalonne/" <i class="fa fa-instagram" style="font-size:20px;text-decoration:none;color:black;"></i></a></button>
+      <button class="reseaux"><a href="https://www.facebook.com/Avalonne.naturopathe.lyon/" <i class="fa-brands fa-facebook-square" style="font-size:20px;text-decoration:none;color:black;"></i></a></button>
+      <button class="reseaux"><a href="https://www.tiktok.com/@terre_d_avalonne" <i class="fa-brands fa-tiktok" style="font-size:20px;text-decoration:none;color:black;"></i></a></button>
+
+    </p>
+
+      
+  </footer>
+  
+</body>
+<style> 
+  html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.logoTerreDavalonne{
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+h1{
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
+nav ul {
+  padding:0;
+  margin:0;
+  list-style-type:none;
+  }
+
+
+
+
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 130px;
+  background-color: #7FAD39;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.reseaux {
+  height: 38px; 
+  width: 38px; 
+  border-radius:50%;
+  border: 1px solid #000;
+}
+</style>
+</html>

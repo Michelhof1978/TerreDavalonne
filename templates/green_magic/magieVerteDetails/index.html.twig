@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - Plantes médicinales{% endblock %}
+
+{% block body %}
+
+    <div class="plants-details-wrapper">
+        <div class="container">
+        {#              HEAD             #}
+        {{ include ('template/_head_page.html.twig', {title: 'De la magie verte pour Les Hommes!'}) }}
+        {{ include ('green_magic/magieVerteDetails/_magieVerte_details_header.html.twig') }}
+        {#<div class="plants-details-separator"></div>#}
+        {{ include ('green_magic/magieVerteDetails/_magieVerte_details_main.html.twig') }}
+        {{ include ('green_magic/magieVerteDetails/_magieVerte_details_body.html.twig') }}
+        {{ include ('green_magic/magieVerteDetails/_magieVerte_details_comments.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

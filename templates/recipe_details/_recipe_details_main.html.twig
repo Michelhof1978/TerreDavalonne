@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="col-lg-6 col-md-6">
+		<div class="product__details__pic js-nCarroussel">
+			<div class="product__details__pic__slider owl-carousel owl-loaded owl-drag">
+				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						{% for image in recette.images %}
+							{% if loop.index == 1 %}
+								<div class="carousel-item active">
+								{% else %}
+									<div class="carousel-item">
+									{% endif %}
+										{% if image.name  %}
+											<img class="d-block w-100" data-imgbigurl="{{ asset("/images/recettes/" ~ image.name) }}" src="{{ asset("/images/recettes/" ~ image.name) }}" alt="products-pictures">
+										{% else %}
+											<img class="rounded-3 w-full" src="{{ asset('images/not_found_picture.png') }}"  alt="plants-pictures-not-found"/>
+										{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6">
+			<div class="product__details__text">
+				<h3>{{ recette.name }}</h3>
+				<p>{{ recette.description }}</p>
+			</div>
+		</div>
+	</div>

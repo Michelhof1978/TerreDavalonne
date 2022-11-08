@@ -1,0 +1,30 @@
+<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+	<div class="container py-4">
+		<div class="row d-flex justify-content-center py-5">
+			<div class="col-md-6">
+				<h2 style="font-size: 22px;" class="mb-0">Pour recevoir notre newsletter</h2>
+				<span>Saisissez votre e-mail pour recevoir notre newsletter ainsi que des offres spéciales</span>
+			</div>
+			<div class="col-md-6 d-flex align-items-center">
+				<div class="subscribe-form">
+					<div class="form-group d-flex">
+						{{ form_start(form) }}
+						<div class="row">
+							<div class="col">
+								{{ form_label(form.email) }}
+								{{ form_widget(form.email) }}
+							</div>
+							<div class="col" id="some-custom-id">
+								{{ form_row(form.is_rgpd) }}
+							</div>
+							<div class="col">
+								{{ form_row(form.enregistrer) }}
+							</div>
+						</div>
+						{{ form_end(form) }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

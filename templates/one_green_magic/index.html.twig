@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terre d'Avalonne - fiche magie verte{% endblock %}
+
+{% block body %}
+
+    <div class="product-wrapper">
+        {#              HEAD                #}
+        {{ include ('template/_head_page.html.twig', {title: 'Magie verte - Détails'}) }}
+        <div class="d-flex justify-center p-16">
+            <video  controls>
+                <source src=”http://techslides.com/demos/sample-videos/small.ogv” type=video/ogg> <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
+            </video>
+        </div>
+        {#              BODY                #}
+        {{ include ('one_green_magic/_green_magic_details_body.html.twig') }}
+    </div>
+{% endblock %}
